@@ -1,0 +1,14 @@
+.CodeMirror {
+    font-family: monospace;
+    font-size: 14px;
+    height: 100% !important;
+    background: #F9F9F5;
+}
+
+.CodeMirror-vscrollbar {
+    width: 5px;
+}
+
+.CodeMirror-hscrollbar {
+    height: 5px;
+}
