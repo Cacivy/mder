@@ -5,6 +5,7 @@
         lineNumbers: true,
         theme: "default",
         autofocus: true,
+        lineWrapping: "warp",
         scrollbarStyle: "simple" // overlay
     })
 
