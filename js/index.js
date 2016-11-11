@@ -24,7 +24,7 @@
         // scroll event
     editor.on('scroll', function (cm, e) {
             var scroll_info = cm.getScrollInfo()
-            var scale = scroll_info.top / (scroll_info.height - 300);
+            var scale = (scroll_info.top) / (scroll_info.height - scroll_info.clientHeight);
 
             document.getElementById('preview').scrollTop = document.getElementById('preview').scrollHeight * scale
         })
@@ -51,14 +51,11 @@ lines~~
 
 ## Fenced code blocks (and syntax highlighting)
 
-\`
-        \`\`
-        javascript
+\`\`\`javascript
         for (var i = 0; i < items.length; i++) {
             console.log(items[i], i); // log them
         }
-        \`\`
-        \`
+\`\`\`
 
 ## Task Lists
 
@@ -70,7 +67,7 @@ lines~~
 * SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
 * User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
 * User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* \#Num: #1
+* #Num: #1
 * User/#Num: mojombo#1
 * User/Project#Num: mojombo/god#1
 
