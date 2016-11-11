@@ -13,8 +13,9 @@
         document.getElementById('preview').innerHTML = marked(editor.getValue())
         let doms = document.getElementById('preview').getElementsByTagName('pre')
         for (let i = 0; i < doms.length; i++) {
-            doms[i].className += 'language-javascript'
-            doms[i].innerHTML = Prism.highlight(doms[i].innerText, Prism.languages.javascript)
+            let language = doms[i].getElementsByTagName('code')[0].className.split('-')[1] || javascript
+            doms[i].className += 'language-' + language
+            doms[i].innerHTML = Prism.highlight(doms[i].innerText, Prism.languages[language] || Prism.languages.javascript)
         }
     }
     // keyup event
